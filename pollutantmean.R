@@ -25,7 +25,8 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
   ##  ****   CODE  *********
   ## Based on 'getting 'directory' I will get the path of the files where I can get 
   ## the information.
-  directory <- paste(getwd(), "/", directory, "/", sep = "")
+  path <- getwd()
+  directory <- paste(path, "/", directory, "/", sep = "")
   
   ## All files needed to apply the questions.
   all_files <- list.files(directory)
