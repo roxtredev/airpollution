@@ -33,7 +33,7 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
   
   ## Going through all the files.
   for (i in id) {
-    file <- paste(directory, all_files[i], sep = "")
+    file <- paste(directory, all_files[i], sep = "/")
     file_data <- read.csv(file)
     
     data <- rbind(data, file_data)
