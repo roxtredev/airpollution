@@ -38,7 +38,7 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
   for (i in id) {
     dir <- paste(directory, all_files[i], sep = "")
     file_data <- read.csv(dir)
-    
+   
     data <- rbind(data, file_data)
   }
   mean(data[[pollutant]], na.rm = TRUE)
